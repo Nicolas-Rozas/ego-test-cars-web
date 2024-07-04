@@ -1,0 +1,118 @@
+.carGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  margin-top: 75px;
+}
+.carCard {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.carCard:hover {
+  transform: translateY(-5px);
+}
+
+.carContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.carImage {
+  object-fit: cover;
+}
+
+.imageWrapper {
+  width: 270px;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.carName {
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 30px;
+  text-align: center;
+  color: black;
+}
+
+.selectedCarName {
+  color: red;
+}
+
+.yearPriceStyle {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 17.07px;
+  text-align: center;
+  color: #191919;
+}
+
+.priceYearContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.priceSeparator {
+  margin: 0 5px;
+}
+
+.cardOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0);
+  z-index: 1;
+  border-radius: 8px;
+}
+
+.verModeloButton {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 10px 20px;
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  width: 60%;
+  font-size: 14px;
+  line-height: 23px;
+  text-align: center;
+  font-weight: 600;
+  z-index: 4;
+}
+
+.buttonContainer {
+  padding-top: 20px;
+}
+@media (max-width: 768px) {
+  .carGrid {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 20px;
+    margin-top: 30px;
+  }
+}
+
+.verModeloButton:hover {
+  background-color: #555;
+}
