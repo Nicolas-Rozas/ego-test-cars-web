@@ -1,0 +1,146 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  color: black;
+  padding: 10px 20px;
+  position: static;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  height: 70px;
+  border-bottom: 1px solid #cccccc;
+}
+
+.links {
+  display: flex;
+  align-items: center;
+  margin-left: 16px;
+}
+
+.links p {
+  margin: 0 15px;
+  cursor: pointer;
+  color: #191919;
+  text-decoration: none;
+}
+.navLink {
+  margin-right: 32px;
+  font-size: 20px;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  padding-right: 20px;
+}
+
+.menu label {
+  cursor: pointer;
+}
+
+.menuContent {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 25%;
+  background-color: white;
+  padding: 20px;
+  transform: translateX(100%);
+  transition: transform 0.3s ease-in-out;
+  z-index: 900;
+  color: black;
+  text-align: right;
+  max-height: calc(100vh);
+  overflow-y: auto;
+}
+
+.closeButton {
+  font-size: 14px;
+  cursor: pointer;
+  color: black;
+  margin-right: 10px;
+  margin-bottom: 15px;
+}
+
+.menuContent.open {
+  transform: translateX(0);
+}
+
+.menuContent ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.menuContent ul li {
+  padding: 10px 0;
+}
+
+.menuContent ul li:last-child {
+  border-bottom: none;
+}
+
+.menuContent a {
+  color: black;
+  text-decoration: none;
+}
+
+.border {
+  border-bottom: 2px solid #e9e9e9;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.redBottom {
+  position: absolute;
+  bottom: -27px;
+  left: 0;
+  width: 110%;
+  border-bottom: 4px solid #d0021b;
+}
+
+.linkStyles {
+  text-decoration: none;
+  margin-left: 90px;
+  display: inline-block;
+  position: relative;
+}
+.mobileIcon {
+  display: none;
+}
+
+.menuIconText {
+  margin-left: 10px;
+}
+
+.menuIcon {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+  .menuStyleWord {
+    display: none;
+  }
+  .mobileMenu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+  .mobileIcon {
+    display: block;
+  }
+  .links {
+    display: none;
+  }
+
+  .menuContent {
+    width: 70%;
+  }
+}
