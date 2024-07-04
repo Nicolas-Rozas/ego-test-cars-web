@@ -1,0 +1,48 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: flex-start;
+}
+
+.content {
+  flex: 1;
+}
+.bannerContainer {
+  width: 100%;
+  height: 410px;
+  background-color: #f7f7f7;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.arrowContainer {
+  width: 45px;
+  height: 147px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0.58;
+  background-color: white;
+  margin-bottom: 50px;
+  cursor: pointer;
+}
+
+.arrow {
+  color: #474747;
+}
+
+.arrowLeft {
+  margin-right: 5px;
+}
+
+.arrowRight {
+  margin-left: 5px;
+}
+@media (max-width: 767px) {
+  .content {
+    padding: 0 1vh;
+  }
+}
