@@ -46,7 +46,11 @@
   .content {
     padding: 0 1vh;
   }
-
+  .highlightImage {
+    flex: 1;
+    margin-right: 0px;
+  }
+  
   .highlightDescription {
     max-width: 100%;
   }
