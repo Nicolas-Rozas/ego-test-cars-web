@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import styles from "./NavBar.module.css";
 import Image from "next/image";
@@ -53,6 +53,19 @@ const NavBar = () => {
     }
   }, []);
 
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (menuRef.current && !(menuRef.current as any).contains(event.target)) {
+        setIsMobileMenuOpen(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
+
   const handleItemClick = (text: string) => {
     setSelectedNavItem(text);
     localStorage.setItem("selectedNavItem", text);
@@ -61,6 +74,8 @@ const NavBar = () => {
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
+
+  const menuRef = useRef<HTMLDivElement>(null);
 
   return (
     <nav className={styles.navbar}>
@@ -120,7 +135,7 @@ const NavBar = () => {
       </div>
 
       {/* Mobile menu */}
-      <div className={styles.mobileMenu}>
+      <div className={styles.mobileMenu} ref={menuRef}>
         <Image
           className={styles.mobileIcon}
           src="/egoLogo.png"
