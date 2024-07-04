@@ -1,0 +1,80 @@
+.highlightsContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.highlight {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 30px;
+  padding-inline: 10vh;
+  align-items: center;
+}
+
+.highlightReversed {
+  flex-direction: row-reverse;
+}
+
+.highlightImage {
+  flex: 1;
+  margin-right: 20px;
+}
+
+.highlightContent {
+  flex: 1;
+}
+
+.highlightTitle {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 27px;
+  text-align: left;
+  margin-top: 20px;
+}
+
+.highlightDescription {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 27px;
+  text-align: left;
+  max-width: 90%;
+}
+
+@media (max-width: 767px) {
+  .content {
+    padding: 0 1vh;
+  }
+
+  .highlightDescription {
+    max-width: 100%;
+  }
+  .highlightTitle {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 27px;
+    text-align: left;
+    margin-top: 40px;
+    margin-bottom: 20px;
+  }
+
+  .highlight {
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+    padding-inline: 0px;
+    justify-content: center;
+  }
+
+  .highlight img {
+    margin-right: 0;
+    margin-bottom: 10px;
+    max-width: 100%;
+    max-height: 250px;
+  }
+
+  .highlightReversed .highlightImage {
+    margin-right: 0;
+  }
+}
