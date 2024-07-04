@@ -1,0 +1,31 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.content {
+  flex: 1;
+  padding: 0 14vh;
+}
+
+@media (max-width: 768px) {
+  .content {
+    padding: 0 10px;
+  }
+}
+
+.titleStyles {
+  font-size: 50px;
+  font-weight: 700;
+  color: #333;
+  margin-top: 82px;
+  margin-bottom: 72px;
+}
+
+@media (max-width: 768px) {
+  .titleStyles {
+    width: 100%;
+    font-size: 35px;
+  }
+}
