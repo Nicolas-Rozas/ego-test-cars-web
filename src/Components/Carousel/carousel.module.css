@@ -1,0 +1,125 @@
+.carouselContainer {
+  position: relative;
+  width: 100%;
+  height: 392px;
+  overflow: hidden;
+}
+
+.cardContainer {
+  display: flex;
+  width: calc(100% * var(--totalImages));
+  transition: transform 0.5s ease;
+  transform: translateX(calc(-100% * var(--currentIndex)));
+  overflow-x: scroll;
+  overflow-y: hidden;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.card {
+  width: 250px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  border-radius: 15px;
+  margin-top: 20px;
+}
+
+.cardInner {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.carouselImage {
+  height: 140px;
+  object-fit: contain;
+  border-radius: 15px;
+}
+
+.cardText {
+  margin-top: 20px;
+  text-align: left;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.cardDescription {
+  font-size: 16px;
+  font-weight: 400;
+  text-align: left;
+  margin-top: 18px;
+  width: 100%;
+}
+
+.arrowContainer {
+  position: absolute;
+  top: 10%;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  z-index: 150;
+}
+
+.arrow {
+  color: #474747;
+  cursor: pointer;
+  background-color: #ffffffb2;
+  height: 20vh;
+}
+
+.paginator {
+  position: absolute;
+  bottom: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  z-index: 100;
+}
+
+.pageIndicator {
+  width: 10px;
+  height: 8px;
+  background-color: #c5c5c5;
+  border-radius: 5px;
+  margin: 0 3px;
+}
+
+.selectedPage {
+  background-color: #4a4a4a;
+}
+
+@media (max-width: 768px) {
+  .carouselContainer {
+    overflow-x: hidden;
+  }
+
+  .card {
+    width: 100%;
+    height: 100%;
+    margin-top: 10px;
+    scroll-snap-align: start;
+    flex: 0 0 auto;
+  }
+
+  .carouselImage {
+    height: 100%;
+    width: 100%;
+    border-radius: 0;
+  }
+
+  .arrowContainer {
+    display: none;
+  }
+
+  .paginator {
+    display: none;
+  }
+}
